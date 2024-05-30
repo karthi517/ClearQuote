@@ -86,7 +86,7 @@ if st.checkbox("1.c.Which parts were least frequently detected?",False):
 # Streamlit app
 st.title("Vehicle Inspection Coverage")
 
-st.header("Which vehicles have been inspected thoroughly (max number of parts detected) and which ones have poor coverage?")
+st.header("1.d.Which vehicles have been inspected thoroughly (max number of parts detected) and which ones have poor coverage?")
 
 parts_inspected=df.groupby("Vehicle ID")["Part detected"].count().reset_index()
 
@@ -128,7 +128,7 @@ poor_coverage = part_counts[part_counts['Coverage'] == 'Poor']
 
 # Streamlit app
 st.title("Coverage of Parts Detected in Inspections")
-st.header("if a part is detected at least 3 times in an inspection, then it has good coverage. So which parts have poor coverage? And which parts have good coverage?")
+st.header("1.e.if a part is detected at least 3 times in an inspection, then it has good coverage. So which parts have poor coverage? And which parts have good coverage?")
 
 # Display parts with good coverage
 st.subheader("Parts with Good Coverage")
@@ -146,7 +146,7 @@ st.plotly_chart(fig)
 
 
 st.title("Vehicle Part Inspection Coverage")
-st.header("if we select any one specific vehicle (Vehicle ID), then visually represent (e.g. in a heatmap),which parts have been detected/inspected well and which parts have not been detected well")
+st.header("1.f.if we select any one specific vehicle (Vehicle ID), then visually represent (e.g. in a heatmap),which parts have been detected/inspected well and which parts have not been detected well")
 
 # Select a vehicle ID
 vehicle_id = st.selectbox("Select a Vehicle ID", df["Vehicle ID"].unique())
@@ -181,7 +181,7 @@ least_inspected_vehicle = vehicle_inspection_counts.loc[vehicle_inspection_count
 
 # Streamlit app
 st.title("Vehicle Inspection Frequency")
-st.header("Which vehicles were inspected most number of times and which ones were inspected least number of times?")
+st.header("1.g.Which vehicles were inspected most number of times and which ones were inspected least number of times?")
 # Display the most and least inspected vehicles
 st.subheader("Most Inspected Vehicle")
 st.write(most_inspected_vehicle)
