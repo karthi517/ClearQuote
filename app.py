@@ -28,7 +28,7 @@ original_data = df.copy()
 
 # Embed custom CSS
 local_css("styles.css")
-
+st.title("AutoMobile🚗 Inspection🧐 Dashboard")
 if st.checkbox("Show Raw Data", False):
     st.subheader("Raw Data")
     st.write(df)
