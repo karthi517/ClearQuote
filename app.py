@@ -5,7 +5,7 @@ import pydeck as pdk
 import plotly.express as px
 
 # Load data
-st.title("AutoMobile🚗 Inspection🧐 Dashboard")
+
 DATA_URL = "data.csv"
 
 
@@ -33,7 +33,7 @@ if st.checkbox("Show Raw Data", False):
     st.subheader("Raw Data")
     st.write(df)
 
-
+st.title("AutoMobile🚗 Inspection🧐 Dashboard")
 st.header("Checking is there any missing information from the data")
 
 if st.checkbox("Show the count of missing values in the Data", False):
