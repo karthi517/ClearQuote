@@ -5,6 +5,7 @@ import pydeck as pdk
 import plotly.express as px
 
 # Load data
+st.title("AutoMobile🚗 Inspection🧐 Dashboard")
 DATA_URL = "data.csv"
 
 
